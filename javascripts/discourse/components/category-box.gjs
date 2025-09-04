@@ -41,9 +41,8 @@ export default class extends Component {
     >
       <div class="category-box-inner">
         <div
-          class="category-logo
-            {{if @category.uploaded_logo.url '' 'no-logo-present'}}"
-          style={{this.backgroundColor}}
+          class="category-logo {{unless @category.uploaded_logo.url 'no-logo-present'}}"
+          style={{unless @category.uploaded_logo.url this.backgroundColor}}
         >
           {{#if @category.uploaded_logo.url}}
             <CategoryLogo @category={{@category}} />
