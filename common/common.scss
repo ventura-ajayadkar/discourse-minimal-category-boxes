@@ -218,23 +218,19 @@
         width: 100px;
         height: 100px;
         margin: 0;
-        padding: 8px; /* add inner spacing */
-        box-sizing: border-box; /* make padding affect interior only */
 
         img {
           height: 100%;
           width: 100%;
-          object-fit: cover; /* keep aspect and fill area */
-          display: block;
-          box-sizing: border-box;
         }
 
         .category-abbreviation {
           display: none;
-          padding: 4px; /* spacing inside abbreviation background */
-          box-sizing: border-box;
         }
 
+        /*
+        this code is hidden to test if category abbreviation can be hidden from UI or not 
+        */
         &.no-logo-present {
           display: flex;
           justify-content: center;
@@ -248,8 +244,6 @@
             color: white;
             font-weight: bold;
             font-size: 2em;
-            padding: 8px; /* keep some breathing room around text */
-            border-radius: 6px;
           }
         }
       }
