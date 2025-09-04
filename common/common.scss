@@ -225,49 +225,37 @@
         width: 100px;
         height: 100px;
         margin: 16px 0 16px 16px;
-        position: relative; /* ensure proper stacking */
 
         img {
           height: 100%;
           width: 100%;
           border-radius: 4px;
-          display: block;
-          position: relative;
-          z-index: 1; /* keep image above default abbreviation */
         }
 
-        /* hide abbreviation when image is present */
-        .category-abbreviation {
-          display: none !important;
-          position: absolute;
-          inset: 0;
-          align-items: center;
-          justify-content: center;
-          display: flex;
-          color: white;
-          font-weight: bold;
-          font-size: 2em;
-          z-index: 0;
-        }
+        // .category-abbreviation {
+        //   display: none;
+        // }
 
-        &.no-logo-present {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 100px;
-          height: 100%;
-          min-height: 100px;
+        // &.no-logo-present {
+        //   display: flex;
+        //   justify-content: center;
+        //   align-items: center;
+        //   width: 100px;
+        //   height: 100%;
+        //   min-height: 100px;
 
-          /* hide any img that may still be present so the abbreviation isn't obscured */
-          img {
-            display: none !important;
-          }
+        //   img {
+        //     display: none !important;
+        //   }
 
-          .category-abbreviation {
-            display: flex !important;
-            z-index: 2; /* bring abbreviation above other content when shown */
-          }
-        }
+        //   .category-abbreviation {
+        //     display: block;
+        //     color: white;
+        //     font-weight: bold;
+        //     font-size: 2em;
+        //     z-index: 2;
+        //   }
+        // }
       }
 
       .category-details {
