@@ -211,7 +211,7 @@
       /* Give left column room for the image/ordering element */
       grid-template-columns: 100px 1fr auto;
       column-gap: 16px;
-      padding: 0;
+      padding: 0px 0px 0px 1px;
 
       .category-logo {
         align-self: center;
