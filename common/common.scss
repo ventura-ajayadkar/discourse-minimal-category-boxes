@@ -231,21 +231,21 @@
         /*
         this code is hidden to test if category abbreviation can be hidden from UI or not 
         */
-        // &.no-logo-present {
-        //   display: flex;
-        //   justify-content: center;
-        //   align-items: center;
-        //   width: 100px;
-        //   height: 100%;
-        //   // min-height: 100px;
+        &.no-logo-present {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100px;
+          height: 100%;
+          min-height: 100px;
 
-        //   .category-abbreviation {
-        //     display: block;
-        //     color: white;
-        //     font-weight: bold;
-        //     font-size: 2em;
-        //   }
-        // }
+          .category-abbreviation {
+            display: block;
+            color: white;
+            font-weight: bold;
+            font-size: 2em;
+          }
+        }
       }
 
       .category-details {
