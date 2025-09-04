@@ -211,6 +211,7 @@
       /* Give left column room for the image/ordering element */
       grid-template-columns: 100px 1fr auto;
       column-gap: 16px;
+      /* this change is for showing left side border of card */
       padding: 0px 0px 0px 1px;
 
       .category-logo {
@@ -325,7 +326,8 @@
 // Subcategory theming
 #header-list-area {
   .custom-category-boxes {
-    grid-template-columns: 1fr 1fr 1fr;
+    // grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 100px 1fr auto;
     margin-top: 32px;
 
     .category-box-inner {
