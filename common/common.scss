@@ -56,7 +56,7 @@
   .custom-category-boxes {
     display: flex;
     flex-direction: row;
-    margin: 0 0 0 0;
+    margin: 0 0 32px 0;
     width: 100%;
     flex-wrap: wrap;
 
@@ -219,11 +219,12 @@
         display: inline-block;
         width: 100px;
         height: 100px;
-        margin: 16px 0 16px 16px;
+        margin: 0 0 0 0;
 
         img {
           height: 100%;
           width: 100%;
+          margin: 8px 8px 8px 8px;
           border-radius: 4px;
         }
 
