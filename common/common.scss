@@ -225,15 +225,29 @@
         width: 100px;
         height: 100px;
         margin: 16px 0 16px 16px;
+        position: relative; /* ensure proper stacking */
 
         img {
           height: 100%;
           width: 100%;
           border-radius: 4px;
+          display: block;
+          position: relative;
+          z-index: 1; /* keep image above default abbreviation */
         }
 
+        /* hide abbreviation when image is present */
         .category-abbreviation {
-          display: none;
+          display: none !important;
+          position: absolute;
+          inset: 0;
+          align-items: center;
+          justify-content: center;
+          display: flex;
+          color: white;
+          font-weight: bold;
+          font-size: 2em;
+          z-index: 0;
         }
 
         &.no-logo-present {
@@ -250,11 +264,8 @@
           }
 
           .category-abbreviation {
-            display: block;
-            color: white;
-            font-weight: bold;
-            font-size: 2em;
-            z-index: 2;
+            display: flex !important;
+            z-index: 2; /* bring abbreviation above other content when shown */
           }
         }
       }
