@@ -223,30 +223,34 @@
         padding: 8px;            /* add inner spacing */
         box-sizing: border-box; /* ensure padding doesn't expand column */
 
-        /* override core .aspect-image wrapper padding / sizing */
-        .aspect-image {
-          padding: 8px;
-          box-sizing: border-box;
-          width: 100%;
+        img {
           height: 100%;
-
-          img {
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-          }
+          width: 100%;
+          object-fit: cover;
+          display: block;
         }
 
-        /* abbreviation background padding when no logo */
-        &.no-logo-present .category-abbreviation {
-          padding: 8px;
-          border-radius: 6px;
-          background-color: #E0DFE7;
-          color: #333;
-          display: inline-flex;
-          align-items: center;
+        .category-abbreviation {
+          display: none;
+        }
+
+        /*
+        this code is hidden to test if category abbreviation can be hidden from UI or not 
+        */
+        &.no-logo-present {
+          display: flex;
           justify-content: center;
+          align-items: center;
+          width: 100px;
+          height: 100%;
+          min-height: 100px;
+
+          .category-abbreviation {
+            display: block;
+            color: white;
+            font-weight: bold;
+            font-size: 2em;
+          }
         }
       }
 
