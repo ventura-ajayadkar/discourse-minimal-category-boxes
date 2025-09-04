@@ -210,7 +210,7 @@
       grid-auto-flow: column;
       /* Give left column room for the image/ordering element */
       grid-template-columns: 100px 1fr auto;
-      column-gap: 16px;
+      column-gap: 12px;
       /* this change is for showing left side border of card */
       padding: 0px 0px 0px 1px;
 
@@ -220,7 +220,7 @@
         width: 100%;
         height: 100%;
         margin: 0;
-        padding: 4px;            /* add inner spacing */
+        padding: 8px;            /* add inner spacing */
         box-sizing: border-box; /* ensure padding doesn't expand column */
 
         img {
