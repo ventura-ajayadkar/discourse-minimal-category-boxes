@@ -43,6 +43,7 @@ export default class extends Component {
         <div
           class="category-logo
             {{if @category.uploaded_logo.url '' 'no-logo-present'}}"
+          style={{this.backgroundColor}}
         >
           {{#if @category.uploaded_logo.url}}
             <CategoryLogo @category={{@category}} />
