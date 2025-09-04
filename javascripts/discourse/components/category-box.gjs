@@ -15,6 +15,11 @@ export default class extends Component {
     return htmlSafe(`background-color: #${this.args.category.color}`);
   }
 
+  get hasUploadedLogo() {
+    const ul = this.args.category.uploaded_logo;
+    return Boolean(ul && ul.url);
+  }
+
   get getAbbreviation() {
     let abbr = this.args.category.name.replace(" and", "").split(" ");
 
@@ -41,8 +46,9 @@ export default class extends Component {
     >
       <div class="category-box-inner">
         <div
-          class="category-logo {{unless @category.uploaded_logo.url 'no-logo-present'}}"
-          style={{unless @category.uploaded_logo.url this.backgroundColor}}
+          class="category-logo {{if this.hasUploadedLogo '' 'no-logo-present'}}"
+          data-uploaded-logo-url={{@category.uploaded_logo.url}}
+          style={{unless this.hasUploadedLogo this.backgroundColor}}
         >
           {{#if @category.uploaded_logo.url}}
             <CategoryLogo @category={{@category}} />
